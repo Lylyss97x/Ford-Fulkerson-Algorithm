@@ -1,9 +1,11 @@
 from collections import defaultdict
 from implementations.FordFulkersonWithList import FordFulkersonList
 from implementations.FordFulkersonWithMatrix import FordFulkersonMatrix
+from visualisations.visualisations import GraphVisualizer
 
 def main():
-    # Exemple de graphe pour la matrice d'adjacence
+    
+    #Test Algorith with adjacency matrix
     graph_flux = [
         [0, 16, 13, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 10, 12, 0, 0, 0, 0, 0, 0],
@@ -24,6 +26,7 @@ def main():
     max_flow_matrix = FFMatrix.max_flow()
     print(f"Flux maximum (Matrice d'adjacence): {max_flow_matrix}")
 
+    #Test Algorith with adjacency list
     FFList = FordFulkersonList(defaultdict(list), source, sink, len(graph_flux))
     FFList.add_edge(0, 1, 16)  
     FFList.add_edge(0, 2, 13)  
@@ -42,6 +45,19 @@ def main():
 
     max_flow_list = FFList.max_flow()
     print(f"Flux maximum (Liste d'adjacence): {max_flow_list}")
+
+    #Visualisation graph
+    graph = [
+    [0, 10, 5, 0],
+    [0, 0, 15, 10],
+    [0, 0, 0, 10],
+    [0, 0, 0, 0]
+    ]
+    highlighted_path = [(0, 1), (1, 2), (2, 3)]
+    reduction_amount = 3  
+
+    visualizer = GraphVisualizer(graph, source=0, sink=3, highlighted_path=highlighted_path, reduction=reduction_amount)
+    visualizer.visualize()
 
 
 if __name__ == "__main__":
