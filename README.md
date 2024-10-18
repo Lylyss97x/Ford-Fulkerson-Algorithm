@@ -6,9 +6,15 @@
 The Ford-Fulkerson algorithm computes the maximum flow in a flow network. In simple terms, according to the maximum of existing paths possible between a point A and a point B, and their flow capacities (the maximum values that can go through the path), we search for the maximum flow we can reach by trying to add new paths. We repeat the process until all flows are saturated or there are no paths left. The algorithm was published by two mathematicians Delbert Ray Fulkerson and Lester Randolph Ford in 1956.
 
 # Applications
-Water distribution: Optimizes the quantity of water delivered through a pipe network, while respecting pipe capacities.
-Bipartite matching: Solves matching problems in bipartite graphs (e.g. assigning tasks to workers).
-Circulation with demands: Solves more complex flow problems where some nodes have flow requirements, and arcs can have minimum and maximum capacities.
+### Water distribution
+Optimizes the quantity of water delivered through a pipe network, while respecting pipe capacities.
+
+### Bipartite matching
+Solves matching problems in bipartite graphs (e.g. assigning tasks to workers).
+
+### Circulation with demands
+Solves more complex flow problems where some nodes have flow requirements, and arcs can have minimum and maximum capacities.
+
 
 # COMPLEXITY
 ## First Implementation Complexity  : Adjacency Matrix
