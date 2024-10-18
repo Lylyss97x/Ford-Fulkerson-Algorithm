@@ -6,16 +6,7 @@
 
 from abc import ABC
 from collections import defaultdict
-import time
 
-class Perfo:
-
-    def timeExecution(functionCalled, *args):
-
-        start_time = time.time()
-        functionCalled(args)
-        elapsed_time = start_time - time.time()
-        print (f'Time elapsed : {elapsed_time}')
     
 class Edge:
 
@@ -88,11 +79,6 @@ class FordFulkersonAlgorithm(ABC):
                 return max_flow
 
             max_flow += flow
-
-
-        
-
-
 
     
 class FordFulkersonList(FordFulkersonAlgorithm):
