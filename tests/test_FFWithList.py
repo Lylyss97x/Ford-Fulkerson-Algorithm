@@ -4,7 +4,7 @@ import os
 from collections import defaultdict
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from implementations.FordFulkersonWithList import FordFulkersonList
+from implementations.FordFulkersonWithList import FordFulkersonList, Edge
 
 
 class TestFordFulkersonList:
@@ -48,4 +48,13 @@ class TestFordFulkersonList:
         ff.add_edge(2, 3, 10)
 
         assert ff.max_flow() == 15
+
+    def test_initialization(self):
+        # Test that an edge is initialized correctly
+        edge = Edge(1, 10)
+        assert edge.to == 1
+        assert edge.capacity == 10
+        assert edge.flow == 0
+        assert edge.latest_capacity() == 10  
+
 
