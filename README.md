@@ -1,7 +1,8 @@
 # FORD FULKERSON ALGORITHM
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com)
-![Capture d'écran 2024-10-18 122038](https://github.com/user-attachments/assets/4473b687-79db-45ef-a91e-54043fc769d1)
+
+![Capture d'écran 2024-10-18 122527](https://github.com/user-attachments/assets/e874be1a-b08b-4744-aae7-0ffc496e123c)
 
 # Concept
 The Ford-Fulkerson algorithm computes the maximum flow in a flow network. In simple terms, according to the maximum of existing paths possible between a point A and a point B, and their flow capacities (the maximum values that can go through the path), we search for the maximum flow we can reach by trying to add new paths. We repeat the process until all flows are saturated or there are no paths left. The algorithm was published by two mathematicians Delbert Ray Fulkerson and Lester Randolph Ford in 1956.
