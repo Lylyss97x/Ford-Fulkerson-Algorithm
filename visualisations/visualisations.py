@@ -70,7 +70,7 @@ class GraphVisualizer:
             nx.draw_networkx_edges(G_reduced, self.pos, edgelist=edges_to_highlight, edge_color='red', width=2.5)
 
         table_data = [[key, value] for key, value in edge_labels_reduced.items()]
-        table = plt.table(cellText=table_data, colLabels=['Clé', 'Valeur'], cellLoc='center', loc='upper right', 
+        table = plt.table(cellText=table_data, colLabels=['Node', 'Capacity'], cellLoc='center', loc='upper right', 
                           bbox=[0.75, 0.75, 0.2, 0.2])
 
         table.auto_set_font_size(False)
